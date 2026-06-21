@@ -1,4 +1,4 @@
-# Website_Deployment.yaml
+# App Deployment Definition
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -22,6 +22,7 @@ spec:
           ports:
             - containerPort: 80
 ---
+# Service Definition
 apiVersion: v1
 kind: Service
 metadata:
@@ -35,6 +36,7 @@ spec:
     - port: 80
       targetPort: 80
 ---
+# Ingress Definition
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
